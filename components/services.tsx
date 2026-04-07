@@ -3,50 +3,51 @@
 import { useState } from "react"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { Sparkles, Hand, Footprints, Palette, Star, Heart, MessageCircle } from "lucide-react"
+import { Sparkles, Hand, Footprints, Palette, Star, Heart, MessageCircle, Gem } from "lucide-react"
 import { useScrollAnimation } from "@/hooks/use-scroll-animation"
+
 
 const services = [
   {
     icon: Hand,
     title: "Manicure Tradicional",
     description: "Cuidado completo para suas unhas com esmaltação perfeita e duradoura.",
-    price: "A partir de R$ 35",
+    price: "R$ 40",
     highlight: false,
   },
   {
     icon: Footprints,
-    title: "Pedicure Completa",
-    description: "Tratamento relaxante para seus pés com esfoliação e hidratação profunda.",
-    price: "A partir de R$ 45",
+    title: "Pedicure Tradicional",
+    description: "Cuidado completo para seus pés com conforto e acabamento impecável.",
+    price: "R$ 45",
     highlight: false,
   },
   {
     icon: Sparkles,
-    title: "Unhas em Gel",
-    description: "Alongamento e fortalecimento com acabamento impecável e duração prolongada.",
-    price: "A partir de R$ 80",
+    title: "Combo Mãos + Pés",
+    description: "Manicure e pedicure no mesmo atendimento, com praticidade e cuidado completo.",
+    price: "R$ 80",
     highlight: true,
   },
   {
-    icon: Palette,
-    title: "Nail Art",
-    description: "Designs exclusivos e personalizados inspirados em padrões africanos e tendências.",
-    price: "A partir de R$ 50",
+    icon: Gem,
+    title: "Alongamento em Gel",
+    description: "Alongamento em gel para unhas mais longas, resistentes e com aparência natural e duradoura.",
+    price: "R$ 200",
     highlight: false,
   },
   {
     icon: Star,
     title: "Esmaltação em Gel",
     description: "Cores vibrantes com brilho intenso que dura até 3 semanas.",
-    price: "A partir de R$ 55",
+    price: "R$ 125",
     highlight: false,
   },
   {
     icon: Heart,
     title: "Spa dos Pés",
     description: "Experiência completa de relaxamento com massagem e aromaterapia.",
-    price: "A partir de R$ 90",
+    price: "R$ 85",
     highlight: true,
   },
 ]
@@ -95,7 +96,7 @@ function ServiceCard({
         {service.highlight && (
           <div className="absolute top-4 right-4">
             <span className="px-3 py-1 rounded-full bg-primary text-primary-foreground text-xs font-medium">
-              Popular
+              Desconto de Primeiro cliente !
             </span>
           </div>
         )}
