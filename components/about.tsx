@@ -27,7 +27,7 @@ const professionals = [
   },
   {
     name: "Mariana Barbosa",
-    role: "Manicure & Pedicure",
+    role: "Manicure & Trancista",
     description:
       "Especialista em nail art e técnicas de alongamento, Mariana transforma unhas em verdadeiras obras de arte.",
     quote: "Cada unha é uma tela em branco esperando para ganhar vida.",
@@ -137,7 +137,7 @@ export function About() {
             <div className="relative aspect-square max-w-md mx-auto lg:max-w-none">
               {/* Floating decorative elements */}
               <div className="absolute -top-4 -right-4 w-16 h-16 rounded-full bg-accent flex items-center justify-center text-accent-foreground font-bold shadow-lg z-20">
-                5+
+                18+
                 <span className="text-xs ml-0.5">anos</span>
               </div>
 
