@@ -60,7 +60,7 @@ export function Hero() {
         <p className={`text-xl md:text-2xl text-foreground mb-4 font-light transition-all duration-700 delay-200 ${
           isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
         }`}>
-          Arte nas suas mãos, beleza na sua alma
+          Unhas impecáveis no Tatuapé com atendimento personalizado 💅
         </p>
 
         {/* Subtitle */}
@@ -82,7 +82,7 @@ export function Hero() {
           >
             <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
               <MessageCircle className="mr-2 h-5 w-5" />
-              Agende pelo WhatsApp
+              Quero agendar meu horário !
             </a>
           </Button>
           <Button 
@@ -101,7 +101,7 @@ export function Hero() {
         }`}>
           <div className="flex items-center gap-2">
             <span className="w-3 h-3 rounded-full bg-secondary" />
-            <span className="text-sm">+800 Clientes Felizes</span>
+            <span className="text-sm">+800 clientes atendidas no Tatuapé</span>
           </div>
           <div className="flex items-center gap-2">
             <span className="w-3 h-3 rounded-full bg-accent" />

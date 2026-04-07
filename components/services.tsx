@@ -96,7 +96,7 @@ function ServiceCard({
         {service.highlight && (
           <div className="absolute top-4 right-4">
             <span className="px-3 py-1 rounded-full bg-primary text-primary-foreground text-xs font-medium">
-              Desconto de Primeiro cliente !
+              Desconto de 1° Atendimento !
             </span>
           </div>
         )}
