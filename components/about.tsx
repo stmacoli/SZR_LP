@@ -10,7 +10,6 @@ const features = [
   "Ambiente acolhedor e higienizado",
   "Profissionais experientes e atenciosas",
   "Produtos de alta qualidade",
-  "Inspiração na cultura africana",
   "Atendimento personalizado",
   "Horários flexíveis",
 ]
@@ -262,11 +261,11 @@ export function About() {
             </span>
 
             <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-6 text-balance">
-              Beleza, Arte e Ancestralidade
+              Beleza, Arte e Modernidade
             </h2>
 
             <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-              O Studio Zileide Rocha nasceu do amor pela beleza e pela cultura africana.
+              O Studio Zileide Rocha nasceu do amor pela beleza das mulheres.
               Aqui, cada atendimento é uma celebração da sua individualidade,
               onde tradição e modernidade se encontram em harmonia.
             </p>
