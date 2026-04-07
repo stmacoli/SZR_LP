@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button"
 import { MessageCircle } from "lucide-react"
 import { useEffect, useState } from "react"
+import Image from "next/image"
 
 export function Hero() {
   const [isLoaded, setIsLoaded] = useState(false)
@@ -16,15 +17,15 @@ export function Hero() {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Pattern - Inspired by African Patterns */}
-      <div className="absolute inset-0 opacity-10">
-        <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
-          <pattern id="african-pattern" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
-            <circle cx="10" cy="10" r="3" fill="currentColor" className="text-primary" />
-            <path d="M0 10 L10 0 L20 10 L10 20 Z" fill="none" stroke="currentColor" strokeWidth="0.5" className="text-secondary" />
-          </pattern>
-          <rect width="100%" height="100%" fill="url(#african-pattern)" />
-        </svg>
+      {/* Background Image Pattern */}
+      <div className="absolute inset-0">
+        <Image
+          src="/hero/hero.jpg"
+          alt="Padrão africano decorativo"
+          fill
+          className="object-cover opacity-30"
+          priority
+        />
       </div>
 
       {/* Decorative Elements */}
@@ -56,18 +57,18 @@ export function Hero() {
         </h1>
 
         {/* Tagline */}
-        <p className={`text-xl md:text-2xl text-muted-foreground mb-4 font-light transition-all duration-700 delay-200 ${
+        <p className={`text-xl md:text-2xl text-foreground mb-4 font-light transition-all duration-700 delay-200 ${
           isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
         }`}>
           Arte nas suas mãos, beleza na sua alma
         </p>
 
         {/* Subtitle */}
-        <p className={`text-lg text-muted-foreground/80 mb-12 max-w-2xl mx-auto leading-relaxed transition-all duration-700 delay-300 ${
+        <p className={`text-lg text-foreground mb-12 max-w-2xl mx-auto leading-relaxed transition-all duration-700 delay-300 ${
           isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
         }`}>
           Um espaço de acolhimento onde cada detalhe é pensado para você. 
-          Inspirado na força e beleza da cultura africana, transformamos suas unhas em verdadeiras obras de arte.
+          Inspirado na força e beleza feminina, transformamos suas unhas em verdadeiras obras de arte.
         </p>
 
         {/* CTA Buttons */}
@@ -100,11 +101,11 @@ export function Hero() {
         }`}>
           <div className="flex items-center gap-2">
             <span className="w-3 h-3 rounded-full bg-secondary" />
-            <span className="text-sm">+500 Clientes Felizes</span>
+            <span className="text-sm">+800 Clientes Felizes</span>
           </div>
           <div className="flex items-center gap-2">
             <span className="w-3 h-3 rounded-full bg-accent" />
-            <span className="text-sm">5 Anos de Experiência</span>
+            <span className="text-sm">18 Anos de Experiência</span>
           </div>
           <div className="flex items-center gap-2">
             <span className="w-3 h-3 rounded-full bg-primary" />
