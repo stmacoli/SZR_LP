@@ -24,6 +24,8 @@ const professionals = [
     quote: "A beleza começa quando você decide ser você mesma.",
     image: "/profissionais/ceo_profissional_zileide.jpg",
     initials: "ZR",
+    experience: "18+",
+    clients: "+500",
   },
   {
     name: "Mariana Barbosa",
@@ -33,6 +35,8 @@ const professionals = [
     quote: "Cada unha é uma tela em branco esperando para ganhar vida.",
     image: "/profissionais/manicure_profissional_mariana.jpg",
     initials: "MB",
+    experience: "9+",
+    clients: "+300",
   },
 ]
 
@@ -137,13 +141,13 @@ export function About() {
             <div className="relative aspect-square max-w-md mx-auto lg:max-w-none">
               {/* Floating decorative elements */}
               <div className="absolute -top-4 -right-4 w-16 h-16 rounded-full bg-accent flex items-center justify-center text-accent-foreground font-bold shadow-lg z-20">
-                18+
+                {professional.experience}
                 <span className="text-xs ml-0.5">anos</span>
               </div>
 
               <div className="absolute -bottom-4 -left-4 w-20 h-20 rounded-full bg-secondary flex items-center justify-center shadow-lg z-20">
                 <span className="text-secondary-foreground text-center text-xs font-medium leading-tight">
-                  +500
+                  {professional.clients}
                   <br />
                   clientes
                 </span>
