@@ -2,14 +2,15 @@
 
 import { useState } from "react"
 import { useScrollAnimation } from "@/hooks/use-scroll-animation"
+import Image from "next/image"
 
 const galleryItems = [
-  { color: "from-primary/40 to-accent/40", label: "Nail Art Africana" },
-  { color: "from-secondary/40 to-primary/30", label: "Esmaltação em Gel" },
-  { color: "from-accent/50 to-secondary/30", label: "Unhas Decoradas" },
-  { color: "from-primary/30 to-secondary/40", label: "Design Exclusivo" },
-  { color: "from-secondary/30 to-accent/50", label: "Padrões Geométricos" },
-  { color: "from-accent/40 to-primary/40", label: "Cores Vibrantes" },
+  { image: "/galeria/manicure_tradicional.webp", label: "Manicure Tradicional" },
+  { image: "/galeria/alongamento_gel.webp", label: "Esmaltação em Gel" },
+  { image: "/galeria/combo.webp", label: "Combo Pés + Mãos" },
+  { image: "/galeria/esmaltacao_gel.webp", label: "Esmaltação em Gel" },
+  { image: "/galeria/pedicure_tradicional.webp", label: "Pedicure Tradicional" },
+  { image: "/galeria/spa_pes.webp", label: "Spa Pés" },
 ]
 
 function GalleryItem({ item, index }: { item: typeof galleryItems[0]; index: number }) {
@@ -26,39 +27,21 @@ function GalleryItem({ item, index }: { item: typeof galleryItems[0]; index: num
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      {/* Gradient Background */}
-      <div className={`absolute inset-0 bg-gradient-to-br ${item.color} transition-transform duration-500 ${
-        isHovered ? 'scale-110' : 'scale-100'
-      }`} />
-      
-      {/* Pattern Overlay */}
-      <div className="absolute inset-0 opacity-30">
-        <svg className="w-full h-full" viewBox="0 0 100 100">
-          <defs>
-            <pattern id={`gallery-pattern-${index}`} x="0" y="0" width="25" height="25" patternUnits="userSpaceOnUse">
-              {index % 3 === 0 && (
-                <>
-                  <circle cx="12.5" cy="12.5" r="10" fill="none" stroke="currentColor" strokeWidth="1" className="text-foreground" />
-                  <circle cx="12.5" cy="12.5" r="5" fill="currentColor" className="text-foreground" />
-                </>
-              )}
-              {index % 3 === 1 && (
-                <>
-                  <rect x="2" y="2" width="21" height="21" fill="none" stroke="currentColor" strokeWidth="1" className="text-foreground" />
-                  <rect x="7" y="7" width="11" height="11" fill="currentColor" className="text-foreground" />
-                </>
-              )}
-              {index % 3 === 2 && (
-                <>
-                  <path d="M12.5 0 L25 12.5 L12.5 25 L0 12.5 Z" fill="none" stroke="currentColor" strokeWidth="1" className="text-foreground" />
-                  <circle cx="12.5" cy="12.5" r="4" fill="currentColor" className="text-foreground" />
-                </>
-              )}
-            </pattern>
-          </defs>
-          <rect width="100%" height="100%" fill={`url(#gallery-pattern-${index})`} />
-        </svg>
+      <div
+        className={`absolute inset-0 transition-transform duration-500 ${
+          isHovered ? "scale-110" : "scale-100"
+        }`}
+      >
+        <Image
+          src={item.image}
+          alt={item.label}
+          fill
+          className="object-cover"
+        />
       </div>
+
+      <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent" />
+
 
       {/* Label */}
       <div className={`absolute inset-0 flex items-end p-4 transition-opacity duration-300 ${
@@ -98,7 +81,7 @@ export function Gallery() {
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
             Cada trabalho é único, assim como você. Veja algumas das nossas criações 
-            inspiradas em padrões africanos e tendências atuais.
+            inspiradas em tendências atuais.
           </p>
         </div>
 
@@ -115,8 +98,9 @@ export function Gallery() {
             Siga-nos no Instagram para mais inspirações
           </p>
           <a 
-            href="#" 
+            href="https://www.instagram.com/studiozileiderocha?igsh=MThlZThzdHo3bGphbA==" 
             className="inline-flex items-center gap-2 mt-4 text-primary hover:text-primary/80 font-medium transition-colors"
+            target="_blanck"
           >
             @studiozileiderocha
             <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
