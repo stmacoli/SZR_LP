@@ -21,7 +21,7 @@ export function WhatsAppButton() {
       <span className="absolute w-full h-full rounded-full bg-[#25D366] animate-ping opacity-30" />
       
       {/* Tooltip */}
-      <span className="absolute right-20 bg-foreground text-background px-4 py-2 rounded-lg text-sm font-medium whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none shadow-lg">
+      <span className="absolute right-20 bg-[#111111] text-white px-4 py-2 rounded-lg text-sm font-medium whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none shadow-lg border border-secondary/40">
         Agende pelo WhatsApp
       </span>
     </a>

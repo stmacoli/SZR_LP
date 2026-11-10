@@ -23,8 +23,8 @@ export function Contact() {
     {
       icon: Clock,
       title: "Horário de Funcionamento",
-      info: "Segunda a Sábado",
-      subinfo: "9h às 19h",
+      info: "Terça a Sábado",
+      subinfo: "8h às 18h",
     },
     {
       icon: Phone,
@@ -57,7 +57,7 @@ export function Contact() {
             className={`lg:col-start-1 lg:row-start-1 transition-all duration-700 ease-out ${contentVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-12"
               }`}
           >
-            <span className="inline-block px-4 py-2 rounded-full bg-secondary/20 text-secondary text-sm font-medium mb-6">
+            <span className="inline-block px-4 py-2 rounded-full bg-accent text-secondary text-sm font-medium mb-6 border border-secondary/20">
               Entre em Contato
             </span>
 
@@ -74,7 +74,7 @@ export function Contact() {
 
             <Button
               size="lg"
-              className="bg-primary hover:bg-primary/90 text-primary-foreground px-10 py-7 text-xl rounded-full shadow-xl hover:shadow-2xl transition-all duration-300"
+              className="bg-primary hover:bg-secondary hover:text-secondary-foreground text-primary-foreground px-10 py-7 text-xl rounded-full shadow-xl hover:shadow-2xl transition-all duration-300"
               asChild
             >
               <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
@@ -97,7 +97,7 @@ export function Contact() {
                 style={{ transitionDelay: `${index * 100 + 300}ms` }}
               >
                 <CardContent className="flex items-center gap-4 p-4 md:p-6 min-h-[112px]">
-                  <div className="w-12 h-12 rounded-xl bg-secondary/20 flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 rounded-xl bg-accent flex items-center justify-center flex-shrink-0">
                     <item.icon className="w-6 h-6 text-secondary" />
                   </div>
 
@@ -119,7 +119,7 @@ export function Contact() {
           >
             <div className="relative aspect-[1/1] w-full max-w-lg mx-auto lg:mx-0">
               {/* Map Container with decorative frame */}
-              <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-primary/20 via-accent/30 to-secondary/20 p-1">
+              <div className="absolute inset-0 rounded-3xl border border-secondary/50 p-1">
                 <div className="w-full h-full rounded-[22px] overflow-hidden bg-card relative">
                   <iframe
                     src={mapEmbedUrl}
@@ -138,7 +138,7 @@ export function Contact() {
 
               {/* Floating location badge */}
               <div className="absolute -top-3 -right-3 z-10">
-                <div className="bg-primary text-primary-foreground px-4 py-2 rounded-full shadow-lg flex items-center gap-2">
+                <div className="bg-primary text-secondary px-4 py-2 rounded-full shadow-lg flex items-center gap-2">
                   <MapPin className="w-4 h-4" />
                   <span className="text-sm font-medium">Tatuapé</span>
                 </div>
@@ -149,7 +149,7 @@ export function Contact() {
                 <Card className="border-0 shadow-xl bg-card/95 backdrop-blur-sm">
                   <CardContent className="p-4">
                     <div className="flex items-start gap-3">
-                      <div className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center flex-shrink-0">
+                      <div className="w-10 h-10 rounded-full bg-accent border border-secondary/40 flex items-center justify-center flex-shrink-0">
                         <MapPin className="w-5 h-5 text-secondary-foreground" />
                       </div>
                       <div>

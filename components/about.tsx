@@ -126,8 +126,8 @@ export function About() {
 
   return (
     <section id="sobre" className="py-24 bg-background relative overflow-hidden">
-      <div className="absolute top-0 left-0 w-64 h-64 rounded-full bg-accent/20 blur-3xl" />
-      <div className="absolute bottom-0 right-0 w-80 h-80 rounded-full bg-primary/10 blur-3xl" />
+      <div className="absolute top-0 left-0 w-64 h-64 rounded-full bg-accent/50 blur-3xl" />
+      <div className="absolute bottom-0 right-0 w-80 h-80 rounded-full bg-secondary/5 blur-3xl" />
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
@@ -139,7 +139,7 @@ export function About() {
           >
             <div className="relative aspect-square max-w-md mx-auto lg:max-w-none">
               {/* Floating decorative elements */}
-              <div className="absolute -top-4 -right-4 w-16 h-16 rounded-full bg-accent flex items-center justify-center text-accent-foreground font-bold shadow-lg z-20">
+              <div className="absolute -top-4 -right-4 w-16 h-16 rounded-full bg-secondary flex items-center justify-center text-secondary-foreground font-bold shadow-lg z-20">
                 {professional.experience}
                 <span className="text-xs ml-0.5">anos</span>
               </div>
@@ -167,7 +167,7 @@ export function About() {
               </a>
 
               {/* Main gradient frame */}
-              <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-primary/20 via-accent/30 to-secondary/20 p-1">
+              <div className="absolute inset-0 rounded-3xl border border-secondary/50 p-1">
                 <div
                   className={`w-full h-full rounded-[22px] bg-card overflow-hidden relative select-none ${isDragging ? "cursor-grabbing" : "cursor-grab"
                     }`}
@@ -256,7 +256,7 @@ export function About() {
             className={`transition-all duration-700 ease-out delay-200 ${contentVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-12"
               }`}
           >
-            <span className="inline-block px-4 py-2 rounded-full bg-primary/20 text-primary text-sm font-medium mb-6">
+            <span className="inline-block px-4 py-2 rounded-full bg-accent text-secondary text-sm font-medium mb-6 border border-secondary/20">
               Sobre Nós
             </span>
 

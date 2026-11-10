@@ -44,8 +44,15 @@ export function Hero() {
         <div className={`mb-8 flex justify-center transition-all duration-700 ${
           isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-8'
         }`}>
-          <div className="w-20 h-20 rounded-full bg-primary flex items-center justify-center">
-            <span className="text-primary-foreground text-3xl font-serif font-bold">ZR</span>
+          <div className="relative w-40 h-40">
+            <Image
+              src="/images/logo-studio.png"
+              alt="Logotipo Studio Zileide Rocha"
+              fill
+              sizes="80px"
+              className="object-contain"
+              priority
+            />
           </div>
         </div>
 
@@ -57,14 +64,14 @@ export function Hero() {
         </h1>
 
         {/* Tagline */}
-        <p className={`text-xl md:text-2xl text-foreground mb-4 font-light transition-all duration-700 delay-200 ${
+        <p className={`text-xl md:text-2xl text-muted-foreground mb-4 font-light transition-all duration-700 delay-200 ${
           isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
         }`}>
           Unhas impecáveis no Tatuapé com atendimento personalizado 💅
         </p>
 
         {/* Subtitle */}
-        <p className={`text-lg text-foreground mb-12 max-w-2xl mx-auto leading-relaxed transition-all duration-700 delay-300 ${
+        <p className={`text-lg text-muted-foreground/80 mb-12 max-w-2xl mx-auto leading-relaxed transition-all duration-700 delay-300 ${
           isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
         }`}>
           Um espaço de acolhimento onde cada detalhe é pensado para você. 
@@ -77,7 +84,7 @@ export function Hero() {
         }`}>
           <Button 
             size="lg" 
-            className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-6 text-lg rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
+            className="bg-primary hover:bg-secondary hover:text-secondary-foreground text-primary-foreground px-8 py-6 text-lg rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
             asChild
           >
             <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
@@ -88,7 +95,7 @@ export function Hero() {
           <Button 
             variant="outline" 
             size="lg"
-            className="border-2 border-secondary text-secondary hover:bg-secondary hover:text-secondary-foreground px-8 py-6 text-lg rounded-full transition-all duration-300"
+            className="border-2 border-foreground text-foreground hover:bg-primary hover:text-primary-foreground px-8 py-6 text-lg rounded-full transition-all duration-300"
             onClick={() => document.getElementById('servicos')?.scrollIntoView({ behavior: 'smooth' })}
           >
             Conheça Nossos Serviços

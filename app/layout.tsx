@@ -20,23 +20,6 @@ export const metadata: Metadata = {
   title: 'Studio Zileide Rocha | Salão de Manicure',
   description: 'Cuide das suas unhas com arte e carinho. Agende pelo WhatsApp!',
   generator: 'v0.app',
-  icons: {
-    icon: [
-      {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
-      },
-    ],
-    apple: '/apple-icon.png',
-  },
 }
 
 export default function RootLayout({

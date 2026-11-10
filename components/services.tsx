@@ -12,28 +12,28 @@ const services = [
     icon: Hand,
     title: "Manicure Tradicional",
     description: "Cuidado completo para suas unhas com esmaltação perfeita e duradoura.",
-    price: "R$ 40",
+    price: "R$ 48",
     highlight: false,
   },
   {
     icon: Footprints,
     title: "Pedicure Tradicional",
     description: "Cuidado completo para seus pés com conforto e acabamento impecável.",
-    price: "R$ 45",
+    price: "R$ 50",
     highlight: false,
   },
   {
     icon: Sparkles,
     title: "Combo Mãos + Pés",
     description: "Manicure e pedicure no mesmo atendimento, com praticidade e cuidado completo.",
-    price: "R$ 80",
+    price: "R$ 95",
     highlight: true,
   },
   {
     icon: Gem,
     title: "Alongamento em Gel",
     description: "Alongamento em gel para unhas mais longas, resistentes e com aparência natural e duradoura.",
-    price: "R$ 200",
+    price: "R$ 220",
     highlight: false,
   },
   {
@@ -47,7 +47,7 @@ const services = [
     icon: Heart,
     title: "Spa dos Pés",
     description: "Experiência completa de relaxamento com massagem e aromaterapia.",
-    price: "R$ 85",
+    price: "R$ 100",
     highlight: true,
   },
 ]
@@ -85,8 +85,8 @@ function ServiceCard({
         onClick={onToggle}
         className={`group relative overflow-hidden transition-all duration-300 h-full cursor-pointer ${
           isActive 
-            ? 'shadow-xl -translate-y-1' 
-            : 'hover:shadow-xl hover:-translate-y-1'
+            ? 'shadow-xl -translate-y-1 border-secondary'
+            : 'hover:shadow-xl hover:-translate-y-1 hover:border-secondary/60'
         } ${
           service.highlight 
             ? 'border-2 border-primary bg-gradient-to-br from-card to-accent/10' 
@@ -95,7 +95,7 @@ function ServiceCard({
       >
         {service.highlight && (
           <div className="absolute top-4 right-4">
-            <span className="px-3 py-1 rounded-full bg-primary text-primary-foreground text-xs font-medium">
+            <span className="px-3 py-1 rounded-full bg-primary text-secondary text-xs font-medium">
               Desconto de 1° Atendimento !
             </span>
           </div>

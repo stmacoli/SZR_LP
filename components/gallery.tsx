@@ -54,7 +54,7 @@ function GalleryItem({ item, index }: { item: typeof galleryItems[0]; index: num
 
       {/* Hover Border */}
       <div className={`absolute inset-0 rounded-2xl border-4 transition-colors duration-300 ${
-        isHovered ? 'border-primary' : 'border-transparent'
+        isHovered ? 'border-secondary' : 'border-transparent'
       }`} />
     </div>
   )
@@ -73,7 +73,7 @@ export function Gallery() {
             headerVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           }`}
         >
-          <span className="inline-block px-4 py-2 rounded-full bg-accent/30 text-accent-foreground text-sm font-medium mb-4">
+          <span className="inline-block px-4 py-2 rounded-full bg-accent text-secondary text-sm font-medium mb-4 border border-secondary/20">
             Nossa Arte
           </span>
           <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 text-balance">

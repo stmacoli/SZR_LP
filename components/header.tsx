@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { MessageCircle, Menu, X } from "lucide-react"
 
@@ -29,17 +30,21 @@ export function Header() {
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled 
-        ? 'bg-card/95 backdrop-blur-md shadow-lg' 
-        : 'bg-transparent'
+        ? 'bg-card/95 backdrop-blur-md border-b border-border shadow-lg'
+        : 'bg-background/80'
     }`}>
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <a href="#" className="flex items-center gap-2">
-            <div className={`w-10 h-10 rounded-full flex items-center justify-center transition-colors ${
-              isScrolled ? 'bg-primary' : 'bg-primary/90'
-            }`}>
-              <span className="text-primary-foreground font-serif font-bold">ZR</span>
+            <div className="relative w-10 h-10 shrink-0">
+              <Image
+                src="/images/logo-studio.png"
+                alt="Logotipo Studio Zileide Rocha"
+                fill
+                sizes="40px"
+                className="object-contain"
+              />
             </div>
             <span className={`font-serif text-lg font-bold transition-colors ${
               isScrolled ? 'text-foreground' : 'text-foreground'
@@ -62,7 +67,7 @@ export function Header() {
               </a>
             ))}
             <Button 
-              className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full"
+              className="bg-primary hover:bg-secondary hover:text-secondary-foreground text-primary-foreground rounded-full"
               asChild
             >
               <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
