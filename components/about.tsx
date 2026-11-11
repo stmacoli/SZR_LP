@@ -32,7 +32,7 @@ const professionals = [
     description:
       "Especialista em nail art e técnicas de alongamento, Mariana transforma unhas em verdadeiras obras de arte.",
     quote: "Cada unha é uma tela em branco esperando para ganhar vida.",
-    image: "/profissionais/manicure_profissional_mariana.jpg",
+    image: "/profissionais/manicure_profissional_mariana.png",
     initials: "MB",
     experience: "9+",
     clients: "+300",
