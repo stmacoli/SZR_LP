@@ -261,16 +261,10 @@ export function About() {
             </span>
 
             <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-6 text-balance">
-              Beleza, Arte e Modernidade
+              Beleza, Arte e Técnica
             </h2>
 
             <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-              O Studio Zileide Rocha nasceu do amor pela beleza das mulheres.
-              Aqui, cada atendimento é uma celebração da sua individualidade,
-              onde tradição e modernidade se encontram em harmonia.
-            </p>
-
-            <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
               Nosso espaço foi criado para ser um refúgio de paz e alegria,
               onde você pode relaxar enquanto cuidamos de cada detalhe das suas mãos e pés.
             </p>

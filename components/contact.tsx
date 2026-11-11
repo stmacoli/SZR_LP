@@ -35,7 +35,7 @@ export function Contact() {
   ]
 
   const mapEmbedUrl =
-    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d913.8!2d-46.5745!3d-23.5388!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5ed4d7e9e0e5%3A0x2c5e8a5c5c5c5c5c!2sR.%20Henrique%20Sertorio%2C%20170%20-%20Tatuap%C3%A9%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2003066-065!5e0!3m2!1spt-BR!2sbr!4v1700000000000"
+    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.887763220583!2d-46.5781515!3d-23.5365389!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cef9088fd7cf81%3A0x109b70ee4d99996c!2sStudio%20Zileide%20Rocha!5e0!3m2!1spt-BR!2sbr!4v1794414402633!5m2!1spt-BR!2sbr"
 
   return (
     <section id="contato" className="py-24 bg-card relative overflow-hidden">
@@ -125,14 +125,13 @@ export function Contact() {
                     src={mapEmbedUrl}
                     width="100%"
                     height="100%"
-                    style={{ border: 0, pointerEvents: "none" }}
+                    style={{ border: 0}}
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
                     title="Localização Studio Zileide Rocha"
                     className="grayscale-[30%] contrast-[1.1]"
                   />
-                  {/* Overlay to block interaction */}
-                  <div className="absolute inset-0 bg-transparent cursor-default" />
+                 
                 </div>
               </div>
 
