@@ -28,6 +28,7 @@ const services = [
     description: "Manicure e pedicure no mesmo atendimento, com praticidade e cuidado completo.",
     price: "R$ 95",
     highlight: true,
+    highlightText: "Mais escolhido 🔥",
   },
   {
     icon: Gem,
@@ -49,6 +50,7 @@ const services = [
     description: "Experiência completa de relaxamento com massagem e aromaterapia.",
     price: "R$ 100",
     highlight: true,
+    highlightText: "Cuidado completo ♥️",
   },
 ]
 
@@ -93,13 +95,13 @@ function ServiceCard({
             : 'border border-border'
         }`}
       >
-        {service.highlight && (
-          <div className="absolute top-4 right-4">
-            <span className="px-3 py-1 rounded-full bg-primary text-secondary text-xs font-medium">
-              Desconto de 1° Atendimento !
-            </span>
-          </div>
-        )}
+          {service.highlight && (
+            <div className="absolute top-4 right-4">
+              <span className="px-3 py-1 rounded-full bg-primary text-secondary text-xs font-medium">
+                {service.highlightText}
+              </span>
+            </div>
+          )}
         
         <CardHeader className="pb-4">
           <div className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-4 transition-colors duration-300 ${
